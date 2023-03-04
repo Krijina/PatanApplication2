@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/courseDetailFragment">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.patanapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_course"
+        android:name="com.example.patanapplication.ui.course.CourseFragment"
+        android:label="@string/menu_course"
+        tools:layout="@layout/fragment_course" >
+
+        <action
+            android:id="@+id/action_nav_course_to_courseDetailFragment3"
+            app:destination="@id/courseDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_newsblog"
+        android:name="com.example.patanapplication.ui.newsblog.NewsblogFragment"
+        android:label="@string/menu_blog"
+        tools:layout="@layout/fragment_course" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.example.patanapplication.ContactFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.example.patanapplication.CourseDetailFragment"
+        android:label="fragment_course_detail"
+        tools:layout="@layout/fragment_course_detail" >
+        <action
+            android:id="@+id/action_courseDetailFragment_to_courseRegisterFragment"
+            app:destination="@id/courseRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseRegisterFragment"
+        android:name="com.example.patanapplication.CourseRegisterFragment"
+        android:label="fragment_course_register"
+        tools:layout="@layout/fragment_course_register" />
+</navigation>
